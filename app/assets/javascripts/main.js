@@ -5,19 +5,23 @@ var getData = function(callback){
 		success: function(data){
 			callback(data);
 		},
-		error: function(res){
-			callback(res);
+		error: function(response){
+			callback(response);
 		}
 	});
 };
 
 var callBack = function(data){
 	for(i=0; i<data.length; i++){
-		$("#quizDiv").append(data[i].title);
-		// console.log(data[i])
+		$('body').append(data[i].title);
 	};
+
+	$('body').append('<button id="create-quiz-button">Create Quiz</button>');
+	$('#create-quiz-button').on('click')
 };
 
 getData(callBack);
 
-// document ready
+
+
+
