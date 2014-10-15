@@ -6,21 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-quiz1 = Quiz.create(title: "Your Favorites")
+quiz1 = Quiz.create(title: "State Capitals")
 
 quiz1.questions.build(
   question_type: "multiple",
-  question: "What's your favorite color?",
-  choices: "blue;pink;green;red",
-  answer: "blue"
+  question: "What is the capital of New Hampshire?",
+  choices: "Concord;Manchester;Augusta;Monpelier",
+  answer: "Concord"
 ).save
 
 quiz1.questions.build(
   question_type: "multiple",
-  question: "What's your favorite animal?",
-  choices: "tiger;lion;pigeon;cat;dog",
-  answer: "tiger"
+  question: "What is the capital of Oregon?",
+  choices: "Sacramento;Boston;Eugene;Salem",
+  answer: "Salem"
 ).save
+
 
 quiz2 = Quiz.create(title: "About You")
 
